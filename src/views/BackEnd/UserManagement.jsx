@@ -7,7 +7,10 @@ export default class UserManagement extends Component {
     }
 
     render() {
-        return ( <> UserManagement </>
+        return (
+            <div className="content">
+                User Management
+            </div>
         )
     }
 }

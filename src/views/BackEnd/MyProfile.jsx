@@ -7,7 +7,10 @@ export default class MyProfile extends Component {
     }
 
     render() {
-        return ( <> My Profile </>
+        return (
+            <div className="content">
+                My Profile
+            </div>
         )
     }
 }

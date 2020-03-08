@@ -7,7 +7,10 @@ export default class Dashboard extends Component {
     }
 
     render() {
-        return ( <> Dashboard </>
+        return (
+            <div className="content">
+                Welcome to Event Management...
+            </div>
         )
     }
 }

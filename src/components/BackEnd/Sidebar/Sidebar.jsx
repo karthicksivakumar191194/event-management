@@ -3,14 +3,27 @@ import {NavLink} from "react-router-dom";
 
 import logo from "../../../assets/BackEnd/img/reactlogo.png";
 import sidebarImage from "../../../assets/BackEnd/img/sidebar-1.jpg"
+import TopNavBarLinks from "../NavBars/TopNavBarLinks";
 
 export default class Sidebar extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            width: window.innerWidth
+          };
     }
 
     activeRoute(routeName) {
         return this.props.location.pathname.indexOf(routeName) > -1 ? "active" : "";
+    }
+
+    updateDimensions() {
+        this.setState({ width: window.innerWidth });
+    }
+    
+    componentDidMount() {
+        this.updateDimensions();
+        window.addEventListener("resize", this.updateDimensions.bind(this));
     }
 
     render() {
@@ -52,7 +65,9 @@ export default class Sidebar extends Component {
                                     </li>
                                 );
                             return null;
-                         })}                        
+                         })}                
+                         {/* If window width is less than 992, add Top Nav Links(Eg. LogOut) to the mobile menu */}     
+                         {this.state.width <= 991 ? <TopNavBarLinks /> : null}   
                     </ul>
                 </div>
             </div>
