@@ -1,0 +1,14 @@
+--------------------------------
+NPM
+--------------------------------
+Rollback a NPM Package or installing a new NPM Package:
+npm install packagename@version
+
+If you want the default styling, include the component's CSS with
+import "react-toggle/style.css" // for ES6 modules
+// or
+require("react-toggle/style.css") // for CommonJS
+
+--------------------------------
+REACT
+--------------------------------
