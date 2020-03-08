@@ -1,6 +1,6 @@
 import Dashboard from './views/BackEnd/Dashboard';
 import UserManagement from './views/BackEnd/UserManagement';
-import UserProfile from './views/BackEnd/UserProfile';
+import MyProfile from './views/BackEnd/MyProfile';
 
 const adminRoutes = [
     {
@@ -10,16 +10,40 @@ const adminRoutes = [
         component: Dashboard,
         layout: "/admin"
     }, {
+        path: "/my-profile",
+        name: "My Profile",
+        icon: "pe-7s-user",
+        component: MyProfile,
+        layout: "/admin"
+    }, {
         path: "/users",
-        name: "Users",
-        icon: "pe-7s-graph",
+        name: "User Management",
+        icon: "pe-7s-users",
         component: UserManagement,
         layout: "/admin"
     }, {
-        path: "/user",
-        name: "User Profile",
-        icon: "pe-7s-user",
-        component: UserProfile,
+        path: "/events",
+        name: "Event Management",
+        icon: "pe-7s-news-paper",
+        component: '',
+        layout: "/admin"
+    }, {
+        path: "/event/categories",
+        name: "Event Categories",
+        icon: "pe-7s-note2",
+        component: '',
+        layout: "/admin"
+    }, {
+        path: "/event/locations",
+        name: "Event Locations",
+        icon: "pe-7s-map-marker",
+        component: '',
+        layout: "/admin"
+    }, {
+        path: "/settings",
+        name: "Settings",
+        icon: "pe-7s-tools",
+        component: '',
         layout: "/admin"
     }
 ];
