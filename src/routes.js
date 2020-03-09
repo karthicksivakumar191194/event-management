@@ -1,6 +1,8 @@
 import Dashboard from './views/BackEnd/Dashboard';
-import UserManagement from './views/BackEnd/UserManagement';
 import MyProfile from './views/BackEnd/MyProfile';
+import UserManagement from './views/BackEnd/UserManagement';
+import EventList from './views/BackEnd/Event/List';
+import EvenCrete from './views/BackEnd/Event/Create';
 
 const adminRoutes = [
     {
@@ -25,7 +27,7 @@ const adminRoutes = [
         path: "/events",
         name: "Event Management",
         icon: "pe-7s-news-paper",
-        component: '',
+        component: EventList,
         layout: "/admin"
     }, {
         path: "/event/categories",

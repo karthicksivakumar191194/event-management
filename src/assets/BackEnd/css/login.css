@@ -1,0 +1,105 @@
+.pageBody {
+  margin: 0;
+  padding: 0;
+  background: url(https://demos.creative-tim.com/marketplace/material-kit-pro/assets/img/bg7.jpg);
+  background-size: cover;
+  font-family: sans-serif;
+  min-height: 100vh;
+}
+.pageBody:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  content: "";
+  background: rgba(0,0,0,.2);
+}
+.loginBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 420px;
+  padding: 70px 40px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+.logoContainer{
+  text-align: center;
+}
+.logoContainer img{
+  width: 50%;
+}
+.user {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: calc(-100px/2);
+  left: calc(50% - 50px);
+}
+
+.loginBox h2 {
+  margin: 0;
+  padding: 0 0 26px;
+  color: #fff;
+  text-align: center;
+}
+
+.loginBox p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #fff;
+}
+
+.loginBox input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.loginBox input[type="email"],
+.loginBox input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+
+::placeholder
+{
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.loginBox input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  color: #eee;
+  font-size: 16px;
+  background-color: #1DC7EA;
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 12px 0 18px;
+}
+
+.loginBox input[type="submit"]:hover {
+  background-color: transparent;
+  border: 1px solid #1DC7EA;
+  color: #1DC7EA;
+}
+
+.loginBox a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}

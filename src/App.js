@@ -3,6 +3,8 @@ import React from 'react';
 //import './App.css';
 import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 import AdminLayout from "./layouts/BackEnd/Admin";
+import Login from "./views/BackEnd/Login";
+import Dashboard from "./views/BackEnd/Dashboard";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/BackEnd/css/animate.min.css";
 import "./assets/BackEnd/sass/light-bootstrap-dashboard-react.scss?v=1.3.0";
@@ -15,6 +17,8 @@ export default function App() {
     return (
         <BrowserRouter>
             <Switch>
+                <Redirect exact from="/admin/" to="/admin/dashboard"/>
+                <Route path="/admin/login" render={props => <Login {...props}/>}/>
                 <Route path="/admin" render={props => <AdminLayout {...props}/>}/>
                 <Redirect from="/" to="/admin/dashboard"/>
             </Switch>

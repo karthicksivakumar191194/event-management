@@ -38,11 +38,11 @@ export default class Sidebar extends Component {
                 data-image={sidebarImage}>
                 <div className="sidebar-background" style={sidebarBackground} ></div>
                 <div className="logo">
-                    <a href="#" className="simple-text logo-mini">
+                    {/*<a href="#" className="simple-text logo-mini">
                         <div className="logo-img">
                             <img src={logo} alt="logo_image"/>
                         </div>
-                    </a>
+                    </a>*/}
                     <a href="#" className="simple-text logo-normal">Event Management</a>
                 </div>
                 <div className="sidebar-wrapper">
