@@ -4,12 +4,14 @@ import Sidebar from '../../components/BackEnd/Sidebar/Sidebar'
 import TopNavBar from '../../components/BackEnd/NavBars/TopNavBar'
 import Footer from '../../components/BackEnd/Footer/Footer'
 import {adminRoutes as routes} from '../../routes';
+import NotFound from '../../views/BackEnd/NotFound';
 
-export default class Admin extends Component {
+export default class Admin extends Component { 
     constructor(props) {
         super(props);
+        console.log('Admin Layout Props', props);
     }
-
+    
     componentDidUpdate(e) {
         if (
           window.innerWidth < 993 &&
@@ -37,7 +39,7 @@ export default class Admin extends Component {
         return routes.map((prop, key) => {
             if (prop.layout === "/admin") {
                 return (
-                    <Route
+                    <Route exact
                         path={prop.layout + prop.path}
                         render={props => (<prop.component {...props}/>)}
                         key={key}/>
@@ -54,7 +56,10 @@ export default class Admin extends Component {
                 <Sidebar {...this.props} routes={routes}/>
                 <div id="main-panel" className="main-panel" ref="mainPanel">
                     <TopNavBar {...this.props} viewName={this.getViewName(this.props.location.pathname)}/>
-                    <Switch>{this.getRoutes(routes)}</Switch>
+                    <Switch>
+                      {this.getRoutes(routes)}
+                      <Route component={NotFound} />
+                    </Switch>
                     <Footer/>
                 </div>
             </div>

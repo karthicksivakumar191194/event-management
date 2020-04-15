@@ -48,7 +48,7 @@ export default class Sidebar extends Component {
                 <div className="sidebar-wrapper">
                     <ul className="nav">
                         {this.props.routes.map((prop, key) => {
-                            if (!prop.redirect)
+                            if (!prop.redirect && !prop.invisible)
                                 return (
                                     <li
                                         className={prop.upgrade ? "active active-pro": this.activeRoute(prop.layout + prop.path)}

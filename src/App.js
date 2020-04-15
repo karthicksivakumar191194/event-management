@@ -4,7 +4,6 @@ import React from 'react';
 import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 import AdminLayout from "./layouts/BackEnd/Admin";
 import Login from "./views/BackEnd/Login";
-import Dashboard from "./views/BackEnd/Dashboard";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/BackEnd/css/animate.min.css";
 import "./assets/BackEnd/sass/light-bootstrap-dashboard-react.scss?v=1.3.0";
@@ -14,6 +13,7 @@ import "./assets/BackEnd/css/pe-icon-7-stroke.css";
 export default function App() {
 
    //route render: func - inline rendering similar to 'component'
+   //since we use inline rendering, we are passing the router props(history, mtch, ..) manually to the component.
     return (
         <BrowserRouter>
             <Switch>
