@@ -63,6 +63,7 @@
   margin-bottom: 20px;
 }
 
+.loginBox input[type="text"],
 .loginBox input[type="email"],
 .loginBox input[type="password"] {
   border: none;
@@ -102,4 +103,10 @@
   font-size: 14px;
   font-weight: bold;
   text-decoration: none;
+}
+
+.validation-field-error {
+  font-weight: 200 !important;
+  color: #ff1f1f !important;
+  font-size: 12px;
 }

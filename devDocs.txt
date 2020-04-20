@@ -12,3 +12,40 @@ require("react-toggle/style.css") // for CommonJS
 --------------------------------
 REACT
 --------------------------------
+AUTHENTICATION:
+*
+src\store.js
+* 
+src\_actions\_types\auth.types.js
+src\_actions\_types\error.types.js
+*
+src\_reducers\authReducer.js
+src\_reducers\errorReducer.js
+*
+src\_actions\authActions.js
+src\_actions\errorActions.js
+
+
+action_type | reducer | action
+
+Dispatch - Hey! Do this action
+Action - Yes Boss. Hello Reducer, user have triggered me(action), check all your(reducer) conditions and do the funcionalities written for me(action)
+
+AUTHENTICATION-PROCESS-FLOW:
+#1 - Here, Dispatch - Hey! Do this action
+src\App.js
+    useEffect(() => {
+        store.dispatch(loaderUser());
+    }, []);
+
+ #2
+src\_actions\authActions.js
+    loaderUser = () => (dispatch, getState) => {
+    //User Loading
+    dispatch({type: authTypes.USER_LOADING})
+}    
+
+Now, this is the action triggred, check the reducers & do the funcionalities for this action
+
+#3
+src\_reducers\authReducer.js
